@@ -30,7 +30,7 @@ Our easy-to-follow Jupyter notebook tutorial, found at `/released_results/how_to
 `/released_results/visualizations` contains the detailed visualizations containing $a\_s^\*$, $\bar{a}\_s^\*$, $\bar{\bar{a}}\_s^\*$, and $a\_\text{final}$ for all datasets. 
 It should be noted that the color distribution and intensity of clipped $a\_s^\*$ are heavily dependent on the anomaly score threshold, therefore there can be some color discrepancies from the paper where the thresholds are adjusted to better showcase the examples for easier understanding.
 
-Moreover, we release the periods of all datasets in `/released_results/UCR_anomaly_dataset_periods.csv`. We manually and carefully measured a period of each dataset using a plot digitizer. We manually did it instead of using the autocorrelation function because there are many datasets where the autocorrealtion cannot properly compute the period. This data is important to allow follow-up papers to use the same window size configurations.
+Moreover, we release the periods of all datasets in `/released_results/UCR_anomaly_dataset_periods.csv`. We manually and carefully measured a period of each dataset using a plot digitizer. We manually did it instead of using the autocorrelation function because there are many datasets where the autocorrealtion cannot properly compute the period. This data is important to allow follow-up papers to use the same window size configurations. Note that we define the window size as $2 \times P$ where $P$ denotes a period.
 
 ## Availability of TimeVQVAE-AD Implementation
 The paper is currently under review, therefore the implementation code of TimeVQVAE-AD will be released as soon as the paper gets accepted. 
