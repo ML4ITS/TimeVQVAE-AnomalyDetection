@@ -1,8 +1,8 @@
 # TimeVQVAE-AD
 
-This is an official GitHub repository for the PyTorch implementation of TimeVQVAE from our paper ["Explainable Time Series Anomaly Detection using Masked Latent Generative Modeling", 2023](https://arxiv.org/abs/2311.12550).
+This is an official GitHub repository for the PyTorch implementation of TimeVQVAE from our paper, ["Explainable time series anomaly detection using masked latent generative modeling." Pattern Recognition (2024)](https://arxiv.org/abs/2311.12550).
 
-TimeVQVAE-AD is a novel time series anomaly detection method, notable for its high accuracy and superior explainability. It builds on the TimeVQVAE method, using masked generative modeling for time-frequency domain analysis. This approach preserves dimensional semantics in the latent space, enabling precise anomaly score computation across different frequency bands. TimeVQVAE-AD also generates counterfactuals, enhancing explainability by presenting likely normal states for detected anomalies. Its effectiveness is demonstrated on the UCR Time Series Anomaly archive, outperforming existing methods in both detection accuracy and explainability.
+TimeVQVAE-AD is a novel time series anomaly detection method, notable for its high accuracy and superior explainability. It builds on TimeVQVAE [1], using masked generative modeling for time-frequency domain analysis. This approach preserves dimensional semantics in the latent space, enabling precise anomaly score computation across different frequency bands. TimeVQVAE-AD also generates counterfactuals, enhancing explainability by presenting likely normal states for detected anomalies. Its effectiveness is demonstrated on the UCR Time Series Anomaly archive, significnatly outperforming existing methods in both detection accuracy and explainability.
 
 <p align="center">
 <img src=".fig/overview_inference_process_timevqvae-ad.png" alt="" width=100% height=100%>
@@ -36,3 +36,18 @@ Moreover, we release the periods of all datasets in `/released_results/UCR_anoma
 The paper is currently under review, therefore the implementation code of TimeVQVAE-AD will be released as soon as the paper gets accepted. 
 
 If you would like to implement TimeVQVAE-AD in the meantime, you may utilize [the TimeVQVAE repository](https://github.com/ML4ITS/TimeVQVAE) as a base.
+
+## References
+[1] Lee, Daesoo, Sara Malacarne, and Erlend Aune. "Vector Quantized Time Series Generation with a Bidirectional Prior Model." International Conference on Artificial Intelligence and Statistics. PMLR, 2023.
+
+## Citation
+```
+@article{lee2024explainable,
+  title={Explainable time series anomaly detection using masked latent generative modeling},
+  author={Lee, Daesoo and Malacarne, Sara and Aune, Erlend},
+  journal={Pattern Recognition},
+  pages={110826},
+  year={2024},
+  publisher={Elsevier}
+}
+```
