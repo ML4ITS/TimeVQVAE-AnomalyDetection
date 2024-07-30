@@ -161,11 +161,11 @@ cython_debug/
 
 # CUSTOM
 .idea/
-dataset/
+preprocessing/dataset/AnomalyDatasets_2021/
+preprocessing/dataset_visualization/
 wandb/
 saved_models/
 docker/
-preprocessing/dataset_visualization/
 evaluation/results
 evaluation/results-prob_sampling
 evaluation/*.zip

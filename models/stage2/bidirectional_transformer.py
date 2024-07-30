@@ -53,6 +53,7 @@ class BidirectionalTransformer(nn.Module):
         in_dim = embed_dim
         out_dim = embed_dim
         self.dropout = dropout
+        self.mask_token_idx = codebook_size
 
         # token embeddings
         self.tok_emb = nn.Embedding(codebook_size+1, embed_dim)  # `+1` is for mask-token
@@ -88,8 +89,13 @@ class BidirectionalTransformer(nn.Module):
         s_M: (b n)
         """
         b, n = s_M.shape
-        
+
         token_embeddings = self.tok_emb(s_M)  # (b n dim)
+        if self.training:
+            mask_ind = (s_M == self.mask_token_idx)[:,:,None]  # (b n 1)
+            token_embeddings_dropout = F.dropout(token_embeddings, p=self.dropout)  # (b n d)
+            token_embeddings = torch.where(mask_ind, token_embeddings, token_embeddings_dropout)  # (b n d)
+
         position_embeddings = self.pos_emb.weight[:n, :]
         embed = token_embeddings + position_embeddings  # (b, n, dim)
 

@@ -17,7 +17,7 @@ trainer_params:
     - 0
   max_steps:
     stage1: 10000
-    stage2: 20000
+    stage2: 50000
   max_hours:
     stage1: 12
     stage2: 12
@@ -46,8 +46,8 @@ MaskGIT:
   prior_model:
     hidden_dim: 128
     depth: 4
-    heads: 2
+    heads: 4
     attn_dim_head: 64
-    ff_mult: 1
+    ff_mult: 4
     use_rmsnorm: True
     dropout: 0.3

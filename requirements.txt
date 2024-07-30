@@ -2,6 +2,7 @@ einops
 matplotlib
 numpy
 pandas
+torch==2.3.0
 pytorch-lightning==2.3.0
 PyYAML
 scikit-learn
