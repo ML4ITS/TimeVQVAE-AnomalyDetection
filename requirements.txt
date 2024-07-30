@@ -1,0 +1,11 @@
+einops
+matplotlib
+numpy
+pandas
+pytorch-lightning==2.3.0
+PyYAML
+scikit-learn
+scipy
+statsmodels==0.14.0
+wandb
+x-transformers==1.30.22

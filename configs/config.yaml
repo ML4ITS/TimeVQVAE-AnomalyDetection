@@ -1,0 +1,53 @@
+dataset:
+  in_channels: 1
+  batch_sizes:
+    stage1: 256 #512
+    stage2: 128 #256 #512
+  num_workers: 0
+  n_periods: 2  # window_size = n_periods * period_length; REF: MERLIN++
+
+exp_params:
+  lr:
+    stage1: 0.001
+    stage2: 0.001
+  linear_warmup_rate: 0.1
+
+trainer_params:
+  gpus:
+    - 0
+  max_steps:
+    stage1: 10000
+    stage2: 20000
+  max_hours:
+    stage1: 12
+    stage2: 12
+  val_check_interval:
+    stage1: 1000
+    stage2: 2000
+
+
+encoder:
+  dim: 64
+  n_resnet_blocks: 4
+  downsampled_width: 32
+
+decoder:
+  n_resnet_blocks: 4
+
+VQ-VAE:
+  n_fft: 4
+  codebook_size: 64 #128
+
+
+MaskGIT:
+  choice_temperature: 4  # for masking
+  T: 20
+  mask_scheduling_func: "cosine"
+  prior_model:
+    hidden_dim: 128
+    depth: 4
+    heads: 2
+    attn_dim_head: 64
+    ff_mult: 1
+    use_rmsnorm: True
+    dropout: 0.3
