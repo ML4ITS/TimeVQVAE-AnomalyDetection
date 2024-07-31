@@ -61,9 +61,17 @@ The results are stored in `evaluation/results/`:
 For details, see `.released_results/README.md`.
 
 
+## Update Notes
+
+### Implementation Modifications
+- [2024.07.26] use the memory-efficient $E$ and $D$ with incremental hidden dimension size for depths; the Snake activation [2] is used for all the activations in $E$ and $D$, resulting in considerable improvement in the reconstruction capability; cosine annealing w/ linear warmup lr scheduler is used.
+
+
+
 ## References
 [1] Lee, Daesoo, Sara Malacarne, and Erlend Aune. "Vector Quantized Time Series Generation with a Bidirectional Prior Model." International Conference on Artificial Intelligence and Statistics. PMLR, 2023.
 
+[2] Ziyin, Liu, Tilman Hartwig, and Masahito Ueda. "Neural networks fail to learn periodic functions and how to fix it." Advances in Neural Information Processing Systems 33 (2020): 1583-1594.
 
 
 ## Citation
