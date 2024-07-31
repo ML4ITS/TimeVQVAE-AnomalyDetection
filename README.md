@@ -45,18 +45,8 @@ download the dataset, locate it ...
 
 
 
-
-## Our Results are Publicly Available
+## Our Results are Available in `.released_results/`
 For details, see `.released_results/README.md`.
-
-
-
-## Update Notes
-
-### Implemenetation Modifications
-* [2024.07.24] Model regularization in stage 1 and setage 2 is very important. Overfitting immediately results in a poor detection performance. Dropouts are widely adopted in stage 1 (i.e., encoder and decoder) and 2 (i.e., transformer).
-* [2024.07.23] Using the kernel size of (1x3) insetad of (1x1) in the residual blocks lead to less noisy anoamly scores. Despite the fact that (1x1) preserves the temporal dimension better by not allowing the mix along the temporal dimension, (1x1) doesn't seem necessary as the VQVAE (stage1) learns to preserve the temporal information effectively even with (1x3). The reason could be the nature of a reconstruction loss that forces the encoder and decoder to capture the most relevant timestep information in the latent space.
-
 
 
 ## References
