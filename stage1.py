@@ -6,7 +6,6 @@ run `python stage1.py`
 import os
 from argparse import ArgumentParser
 import datetime
-import torch
 
 import wandb
 import pytorch_lightning as pl
@@ -17,7 +16,7 @@ from torch.utils.data import DataLoader
 from experiments.exp_stage1 import ExpStage1
 from preprocessing.preprocess import UCR_AnomalySequence
 from preprocessing.data_pipeline import build_data_pipeline
-from utils import get_root_dir, save_model, load_yaml_param_settings, set_window_size
+from utils import get_root_dir, load_yaml_param_settings, set_window_size
 
 
 def load_args():

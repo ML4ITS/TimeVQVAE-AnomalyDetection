@@ -26,23 +26,35 @@ pip install -r requirements.txt
 
 ### Dataset Preparation
 
-Dataset:
-download the dataset, locate it ...
+1. Download the dataset zip file [here](https://figshare.com/articles/dataset/UCR_Time_Series_Anomaly_Detection_datasets_2021_/26410744).
+    - the zip file contains `AnomalyDatasets_2021`. 
+2. Place `AnomalyDatasets_2021` in `preprocessing/dataset/`.
+    - now, you should have `preprocessing/dataset/AnomalyDatasets_2021/`.
 
 
 ## Usage
 
 ### Configuration
-
+`configs/config.yaml` allows configuring various (hyper-)parameters for data processing, training, model settings, etc.
 
 ### Training: Stage1
-
+```
+python stage1.py --dataset_ind 1
+```
 
 ### Training: Stage2
-
+```
+python stage2.py --dataset_ind 1
+```
 
 ### Evaluation
-
+```
+python evaluate.py --dataset_ind 4
+```
+This performs anomaly detection on a test set of a target dataset using pretrained models from stage 1 and 2. 
+The results are stored in `evaluation/results/`:
+* Visualizations: `{dataset_idx}-anomaly_score-latent_window_size_rate_{..}.png` for the predicted anomaly scores with a certain latent window size rate $r_w$ and `{dataset_idx}-joint_anomaly_score-acc_{top-1-acc,top-3-acc,top-5-acc}.png` for the aggregated anomaly score, including $a_\text{final}$.
+* Resulting data: `{dataset_idx}-anomaly_score-latent_window_size_rate_{..}.pkl` and `{dataset_idx}-joint_anomaly_score.pkl`. The jupyter notebook, `.released_results/how_to_plot_anomaly_scores_using_resulting_data.ipynb` provides a tutorial for handling the pkl data.
 
 
 ## Our Results are Publicly Available

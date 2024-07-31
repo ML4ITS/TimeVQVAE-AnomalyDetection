@@ -6,9 +6,7 @@ run `python stage2.py`
 import os
 from argparse import ArgumentParser
 import datetime
-import gc
 
-import torch
 import wandb
 import pytorch_lightning as pl
 from torch.utils.data import DataLoader
@@ -20,8 +18,6 @@ from pytorch_lightning.loggers import WandbLogger
 from experiments.exp_stage2 import ExpStage2
 from utils import get_root_dir, load_yaml_param_settings, set_window_size
 
-# os.environ["WANDB_API_KEY"] = '094ac637e1bc0cf9828d01cdc7a9f6be6799fa62'
-# os.environ["WANDB_MODE"] = "offline"
 
 def load_args():
     parser = ArgumentParser()
