@@ -166,7 +166,8 @@ preprocessing/dataset_visualization/
 wandb/
 saved_models/
 docker/
-evaluation/results
+evaluation/results/*
+!__init__.py
 evaluation/results-prob_sampling
 evaluation/*.zip
 /evaluation/results; 20230627/

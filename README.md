@@ -45,7 +45,7 @@ download the dataset, locate it ...
 
 
 
-## Our Results are Available in `.released_results/`
+## Our Results are Publicly Available
 For details, see `.released_results/README.md`.
 
 
@@ -56,12 +56,17 @@ For details, see `.released_results/README.md`.
 
 ## Citation
 ```
-@article{lee2024explainable,
-  title={Explainable time series anomaly detection using masked latent generative modeling},
-  author={Lee, Daesoo and Malacarne, Sara and Aune, Erlend},
-  journal={Pattern Recognition},
-  pages={110826},
-  year={2024},
-  publisher={Elsevier}
+@article{LEE2024110826,
+title = {Explainable time series anomaly detection using masked latent generative modeling},
+journal = {Pattern Recognition},
+volume = {156},
+pages = {110826},
+year = {2024},
+issn = {0031-3203},
+doi = {https://doi.org/10.1016/j.patcog.2024.110826},
+url = {https://www.sciencedirect.com/science/article/pii/S0031320324005776},
+author = {Daesoo Lee and Sara Malacarne and Erlend Aune},
+keywords = {Time series anomaly detection (TSAD), TimeVQVAE-AD, TimeVQVAE, Masked generative modeling, Explainable AI (XAI), Explainable anomaly detection},
+abstract = {We present a novel time series anomaly detection method that achieves excellent detection accuracy while offering a superior level of explainability. Our proposed method, TimeVQVAE-AD, leverages masked generative modeling adapted from the cutting-edge time series generation method known as TimeVQVAE. The prior model is trained on the discrete latent space of a time–frequency domain. Notably, the dimensional semantics of the time–frequency domain are preserved in the latent space, enabling us to compute anomaly scores across different frequency bands, which provides a better insight into the detected anomalies. Additionally, the generative nature of the prior model allows for sampling likely normal states for detected anomalies, enhancing the explainability of the detected anomalies through counterfactuals. Our experimental evaluation on the UCR Time Series Anomaly archive demonstrates that TimeVQVAE-AD significantly surpasses the existing methods in terms of detection accuracy and explainability. We provide our implementation on GitHub: https://github.com/ML4ITS/TimeVQVAE-AnomalyDetection.}
 }
 ```
