@@ -167,7 +167,7 @@ wandb/
 saved_models/
 docker/
 evaluation/results/*
-!__init__.py
+!evaluation/results/__init__.py
 evaluation/results-prob_sampling
 evaluation/*.zip
 /evaluation/results; 20230627/
