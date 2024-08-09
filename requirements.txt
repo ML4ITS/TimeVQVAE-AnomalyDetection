@@ -1,6 +1,6 @@
 einops
 matplotlib
-numpy
+numpy==1.26.4
 pandas
 torch==2.3.0
 pytorch-lightning==2.3.0
@@ -8,5 +8,6 @@ PyYAML
 scikit-learn
 scipy
 statsmodels==0.14.0
+torchtune
 wandb
 x-transformers==1.30.22
